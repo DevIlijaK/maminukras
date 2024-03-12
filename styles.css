@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+
+body, h1, h2, h3, p, ul, ol, li {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Include border and padding in the element's total width and height */
+}
+
+:root {
+    --firstpage-background: #EFC1C7; /* Definisanje varijable */
+    --secondpage-background: #CBA15D; /* Definisanje varijable */
+    --thirdpage-background: #E79B7F; /* Definisanje varijable */
+    --fourthpage-background: #FFFDEB; /* Definisanje varijable */
+    --fifthpage-background: #9BAF96; /* Definisanje varijable */
+    --font: #38495B;
+    --bs-btn-active-color: #25a244;
+}
+
+/* Osnovni stil tijela stranice */
+body {
+
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+    line-height: 1.6;
+    color: var(--font);
+    background-color: #f4f4f4;
+}
+
+h1 {
+    font-size: 64px;
+    font-weight: 900;
+}
+
+h2 {
+    font-size: 56px;
+    font-weight: 800;
+}
+
+h3 {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+/* Osnovni stil za zaglavlje (header) */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+}
+
+/* Osnovni stil za glavni sadržaj stranice */
+.main-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Osnovni stil za poveznice (linkove) */
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Osnovni stil za slike */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.first-page {
+    display: flex;
+    background-color: var(--firstpage-background);
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.first-page > img {
+    width: 700px;
+}
+
+.second-page {
+    display: flex;
+    background-color: var(--secondpage-background);
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.third-page {
+    display: flex;
+    background-color: var(--thirdpage-background);
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.third-page > div {
+    width: 50%;
+}
+
+.fourth-page {
+    display: flex;
+    background-color: var(--fourthpage-background);
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.fourth-page > button {
+
+    border: 1px solid var(--font); /* Boja granice */
+}
+
+.fifth-page {
+    display: flex;
+    background-color: var(--fifthpage-background);
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.fifth-page-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fifth-page-content > div {
+    width: 50%;
+}
+
+.product-categories {
+    display: flex;
+    margin: 30px 0 30px 0;
+}
+
+/* dugme */
+/* Osnovni stil za HTML button */
+button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border: 1px solid white; /* Boja granice */
+    border-radius: 5px; /* Zaobljeni rubovi */
+    background-color: transparent; /* Boja pozadine */
+    /*color: #fff; !* Boja teksta *!*/
+    transition: background-color 0.3s ease, color 0.3s ease; /* Glatki prijelazi */
+}
+
+/* Pseudo-klase za hover efekte */
+button:hover {
+    background-color: #0056b3; /* Promijenjena boja pozadine na hover */
+    color: #fff; /* Promijenjena boja teksta na hover */
+}
+
+@media (max-width: 991px) {
+    /* Stilovi za tablete ovdje */
+    .first-page {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .second-page {
+    }
+
+    .third-page {
+    }
+
+    .fourth-page {
+    }
+}
+
+@media (min-width: 992px) {
+    /* Stilovi za desktop računala ovdje */
+
+}
+
