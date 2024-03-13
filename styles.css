@@ -30,6 +30,7 @@ body {
 h1 {
     font-size: 64px;
     font-weight: 900;
+    line-height: 1.2; /* Postavljamo line-height na manju vrednost */
 }
 
 h2 {
@@ -38,10 +39,15 @@ h2 {
 }
 
 h3 {
-    font-size: 30px;
+    font-size: 48px;
     font-weight: 600;
+    margin-bottom: 20px;
 }
-
+p{
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 5px;
+}
 /* Osnovni stil za zaglavlje (header) */
 header {
     background-color: #333;
@@ -81,6 +87,8 @@ img {
     padding-right: 10%;
 }
 
+/*First page */
+
 .first-page {
     display: flex;
     background-color: var(--firstpage-background);
@@ -89,9 +97,44 @@ img {
     align-items: center;
 }
 
-.first-page > img {
-    width: 700px;
+.first-page-image-container {
+    position: relative; /* Postavljamo relativnu poziciju na roditeljski div */
+    width: 700px; /* Možete promeniti širinu prema potrebi */
+    height: auto; /* Visina će se automatski prilagoditi sadržaju */
 }
+
+.first-page-text-container {
+    padding: 40px;
+}
+
+.first-page-text-container > h1 {
+    width: 500px;
+    margin-bottom: 30px;
+}
+
+.first-page-text-container > button {
+    width: 400px;
+}
+
+.main-image {
+    border: 2px solid white; /* Dodajemo beli border */
+    border-radius: 300px 300px; /* Zaobljujemo gornje ivice slike */
+}
+
+.small-image-top {
+    position: absolute; /* Postavljamo apsolutnu poziciju na male slike */
+    width: 150px;
+    top: 20px; /* Postavljamo na gornji deo roditeljskog diva */
+    left: 20px; /* Postavljamo na levi deo roditeljskog diva */
+}
+
+.small-image-bottom {
+    position: absolute; /* Postavljamo apsolutnu poziciju na male slike */
+    width: 150px;
+    bottom: 10px;
+    right: 1px;
+}
+/* druga strana */
 
 .second-page {
     display: flex;
@@ -103,17 +146,28 @@ img {
     text-align: center;
 }
 
+/* treca strana */
+
 .third-page {
     display: flex;
     background-color: var(--thirdpage-background);
     height: 100vh;
     justify-content: center;
     align-items: center;
-    text-align: center;
+    text-align: left;
 }
 
 .third-page > div {
     width: 50%;
+}
+.third-page-text-container{
+    margin-right: 40px;
+}
+.third-page-image-container{
+
+    position: relative; /* Postavljamo relativnu poziciju na roditeljski div */
+    width: 700px; /* Možete promeniti širinu prema potrebi */
+    height: auto; /* Visina će se automatski prilagoditi sadržaju */
 }
 
 .fourth-page {
@@ -161,12 +215,14 @@ img {
 button {
     display: inline-block;
     padding: 10px 20px;
-    font-size: 16px;
-    font-family: 'Arial', sans-serif;
+    font-size: 24px;
+    font-family: 'Playfair Display', serif;
     text-align: center;
     text-decoration: none;
     cursor: pointer;
-    border: 1px solid white; /* Boja granice */
+    border: 1px solid white; /* Boja granice */;
+    color: var(--font);
+    font-weight: 600;
     border-radius: 5px; /* Zaobljeni rubovi */
     background-color: transparent; /* Boja pozadine */
     /*color: #fff; !* Boja teksta *!*/
@@ -182,7 +238,6 @@ button:hover {
 @media (max-width: 991px) {
     /* Stilovi za tablete ovdje */
     .first-page {
-        display: flex;
         flex-direction: column;
         text-align: center;
     }
@@ -191,6 +246,20 @@ button:hover {
     }
 
     .third-page {
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+    }
+    .third-page > div {
+        width: 100%;
+    }
+    .third-page-image-container{
+        width: 400px;
+    }
+
+    .third-page-text-container{
+        margin-right: 0;
+        margin-bottom: 50px;
     }
 
     .fourth-page {
