@@ -45,6 +45,7 @@ h3 {
     margin-bottom: 20px;
     line-height: 1.2; /* Postavljamo line-height na manju vrednost */
 }
+
 h4 {
 
     font-size: 40px;
@@ -218,16 +219,16 @@ a:hover {
     background-position: center;
 }
 
-.fourth-page-image-div-three{
+.fourth-page-image-div-three {
     border-radius: 300px 60px 300px 60px; /* Zaobljujemo gornje ivice slike */
     background-image: url('/img/slika3.jpg'); /* Postavljamo pozadinu slike */
 }
-.fourth-page-element{
+
+.fourth-page-element {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-
 
 
 .fifth-page {
@@ -240,9 +241,11 @@ a:hover {
     text-align: center;
 }
 
-.fifth-page-element{
+.fifth-page-element {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    margin-bottom: 50px;
 }
 
 .fifth-page-image-div-one {
@@ -251,19 +254,32 @@ a:hover {
     background-image: url('/img/cvetici.webp'); /* Postavljamo pozadinu slike */
 }
 
-.fifth-page-image-div-two{
+.fifth-page-image-div-two {
     border-radius: 150px; /* Zaobljujemo gornje ivice slike */
     width: 500px;
     height: 300px;
     background-image: url('/img/cvetici.webp'); /* Postavljamo pozadinu slike */
 }
 
-.fifth-page-image-div-three{
+.fifth-page-image-div-three {
     border-radius: 150px; /* Zaobljujemo gornje ivice slike */
     width: 500px;
     height: 300px;
     background-image: url('/img/cvetici.webp'); /* Postavljamo pozadinu slike */
 }
+
+.fifth-page-header {
+    margin-bottom: 20px;
+}
+
+.first-page-text-holder-one {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin-left: 20px;
+}
+
 .product-categories {
     display: flex;
     margin: 30px 0 30px 0;
@@ -271,7 +287,7 @@ a:hover {
     align-content: center;
 }
 
-.sixth-page{
+.sixth-page {
     display: flex;
     background-color: var(--sixthpage-background);
     height: 100vh;
@@ -314,6 +330,7 @@ button:hover {
         margin-bottom: 5px;
         text-align: justify;
     }
+
     /* Stilovi za tablete ovdje */
     .first-page {
         flex-direction: column;
