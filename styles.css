@@ -13,6 +13,7 @@ body, h1, h2, h3, p, ul, ol, li {
     --thirdpage-background: #E79B7F; /* Definisanje varijable */
     --fourthpage-background: #FFFDEB; /* Definisanje varijable */
     --fifthpage-background: #9BAF96; /* Definisanje varijable */
+    --sixthpage-background: #9BAF96; /* Definisanje varijable */
     --font: #38495B;
     --bs-btn-active-color: #25a244;
 }
@@ -85,10 +86,10 @@ a:hover {
 }
 
 /* Osnovni stil za slike */
-img {
-    max-width: 100%;
-    height: auto;
-}
+/*img {*/
+/*    max-width: 500px;*/
+/*    height: auto;*/
+/*}*/
 
 .container {
     box-sizing: border-box;
@@ -110,7 +111,6 @@ img {
 
 .first-page-image-container {
     position: relative; /* Postavljamo relativnu poziciju na roditeljski div */
-    width: 700px; /* Možete promeniti širinu prema potrebi */
     height: auto; /* Visina će se automatski prilagoditi sadržaju */
 }
 
@@ -130,6 +130,7 @@ img {
 .main-image {
     border: 2px solid white; /* Dodajemo beli border */
     border-radius: 300px 300px; /* Zaobljujemo gornje ivice slike */
+    height: 700px;
 }
 
 .small-image-top {
@@ -187,7 +188,7 @@ img {
 .fourth-page {
     display: flex;
     background-color: var(--fourthpage-background);
-    height: 100vh;
+    height: auto;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -208,12 +209,12 @@ img {
 
 .fourth-page-image-div-one {
     border-radius: 60px 300px 60px 300px; /* Zaobljujemo gornje ivice slike */
-    background-image: url('/img/cvetici.jpg'); /* Postavljamo pozadinu slike */
+    background-image: url('/img/cvetici.webp'); /* Postavljamo pozadinu slike */
 }
 
 .fourth-page-image-div-two {
     border-radius: 300px; /* Zaobljujemo gornje ivice slike */
-    background-image: url('/img/slika2.jpg'); /* Postavljamo pozadinu slike */
+    background-image: url('/img/slika2.webp'); /* Postavljamo pozadinu slike */
     background-position: center;
 }
 
@@ -231,30 +232,54 @@ img {
 
 .fifth-page {
     display: flex;
-    background-color: var(--fifthpage-background);
-    height: 100vh;
+    background-color: var(--firstpage-background);
+    height: auto;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
 }
 
-.fifth-page-content {
+.fifth-page-element{
     display: flex;
-    justify-content: center;
     align-items: center;
 }
 
-.fifth-page-content > div {
-    width: 50%;
+.fifth-page-image-div-one {
+    border-radius: 150px; /* Zaobljujemo gornje ivice slike */
+    height: 400px;
+    background-image: url('/img/cvetici.webp'); /* Postavljamo pozadinu slike */
 }
 
+.fifth-page-image-div-two{
+    border-radius: 150px; /* Zaobljujemo gornje ivice slike */
+    width: 500px;
+    height: 300px;
+    background-image: url('/img/cvetici.webp'); /* Postavljamo pozadinu slike */
+}
+
+.fifth-page-image-div-three{
+    border-radius: 150px; /* Zaobljujemo gornje ivice slike */
+    width: 500px;
+    height: 300px;
+    background-image: url('/img/cvetici.webp'); /* Postavljamo pozadinu slike */
+}
 .product-categories {
     display: flex;
     margin: 30px 0 30px 0;
     justify-content: center;
     align-content: center;
 }
+
+.sixth-page{
+    display: flex;
+    background-color: var(--sixthpage-background);
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
 
 /* dugme */
 /* Osnovni stil za HTML button */
@@ -282,6 +307,13 @@ button:hover {
 }
 
 @media (max-width: 991px) {
+
+    p {
+        font-size: 36px;
+        font-weight: 400;
+        margin-bottom: 5px;
+        text-align: justify;
+    }
     /* Stilovi za tablete ovdje */
     .first-page {
         flex-direction: column;
@@ -311,6 +343,12 @@ button:hover {
     }
 
     .fourth-page {
+    }
+
+    .product-categories {
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
     }
 }
 
